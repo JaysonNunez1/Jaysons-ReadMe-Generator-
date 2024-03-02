@@ -21,7 +21,7 @@ const questions = [
     name: "license",
     message: "Please select a license applicable to this project",
     choices:[
-      "MIT License","Apache License 2.0","Boost1.0","MPL2.0","BSD2","None"],
+      "MIT License","Apache License 2.0","Boost1.0","MPL2.0","None"],
       default:"MIT  License"
 },
 {

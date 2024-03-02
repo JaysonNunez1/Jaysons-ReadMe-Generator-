@@ -49,7 +49,17 @@ function writeToFile(fileName, data) {
     });
 }
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions).then((answers)=> {
+        const filename = "README.md";
+        const data = generateMarkdown(answers);
+        writeToFile(filename,data);
+    })
+    .catch((error) =>  {
+        console.log(error);
+    });
+};
+
 
 // Function call to initialize app
 init();

@@ -21,7 +21,25 @@ const badge = renderLicenseBadge('MIT');
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (!license) {
+    return '';
+  }
+}
+let link = '';
+switch (license) {
+  case "MIT":
+   link = `https://opensource.org/licenses/MIT`;
+   break;
+   case "Apache 2.0":
+     link = 'https://opensource.org/licenses/Apache-2.0';
+     break;
+     default:
+       link = '';
+       const link = renderLicenseLink("MIT");
+}
+return link;
+
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
